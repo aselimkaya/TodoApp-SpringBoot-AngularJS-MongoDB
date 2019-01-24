@@ -1,0 +1,28 @@
+<h1>Here are the things that you'll do</h1>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Task ID</th>
+        <th>Task Title</th>
+        <th>Task Description</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Is Done?</th>
+        <th>Delete Task</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="task in taskList" ng-dblclick="editTask(task)">
+        <td>{{task.id}}</td>
+        <td>{{task.title}}</td>
+        <td>{{task.description}}</td>
+        <td>{{task.start}}</td>
+        <td>{{task.end}}</td>
+        <td><input type="checkbox" ng-checked="task.done" ng-click="finishTask(task.id, !task.done)"/></td>
+        <th><i class="fa fa-trash" ng-click="deleteTask(task.id, $index)"></i></th>
+    </tr>
+    </tbody>
+</table>
+
+<button class="btn btn-primary" ng-click="redirect()">Add New Task</button>

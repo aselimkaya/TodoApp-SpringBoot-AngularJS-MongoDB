@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>TODO LIST</title>
+
+    <base href="/"/>
+
+    <link href="/3rd/bootstrap-3.3.7/css/bootstrap.css"
+          th:href="@{/3rd/bootstrap-3.3.7/css/bootstrap.css}"
+          rel="stylesheet"/>
+
+    <link href="/3rd/font-awesome-4.7.0/css/font-awesome.min.css"
+          th:href="@{/3rd/font-awesome-4.7.0/css/font-awesome.min.css}"
+          rel="stylesheet"/>
+</head>
+
+<body ng-app="TodoApp">
+
+<div ng-view>
+</div>
+
+
+<script src="/3rd/angular-1.7.6/angular.min.js" th:src="@{/3rd/angular-1.7.6/angular.min.js}"
+        type="text/javascript"></script>
+<script src="/3rd/angular-1.7.6/angular-route.js" th:src="@{/3rd/angular-1.7.6/angular-route.js}"
+        type="text/javascript"></script>
+<script src="/3rd/angular-1.7.6/angular-resource.js" th:src="@{/3rd/angular-1.7.6/angular-resource.js}"
+        type="text/javascript"></script>
+<script src="/3rd/other/ui-bootstrap-tpls-2.5.0.min.js" th:src="@{/3rd/other/ui-bootstrap-tpls-2.5.0.min.js}"
+        type="text/javascript"></script>
+
+
+<script src="/js/task.app.js" th:src="@{/js/task.app.js}"
+        type="text/javascript"></script>
+<script src="/js/task.js" th:src="@{/js/task.js}"
+        type="text/javascript"></script>
+
+
+</body>
+</html>
